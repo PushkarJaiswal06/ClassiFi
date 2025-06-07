@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Classifier - Classifi</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Structify AI</h1>
+    <p>Revolutionizing Document Classification with AI
+    </p>
+    <a href="#documents"><button>ClassiFI Documents </button></a>
+
+  </header>
+
+  <main>
+    <h1>What is Structify AI?</h1>
+    <p style="margin-left: 185px; margin-right: 185px; font-size: larger; margin-bottom: 80px;">Structify is an
+      intelligent document classification platform designed to automate the organization of unstructured datasets. It
+      combines robust AI models with user feedback to deliver exceptional accuracy and adaptability.</p>
+    <div class="section what-is-classifi">
+      <div class="info-card">
+        <img src="./images/data-classification.png" alt="Easy Document Classification" />
+        <h3>Easy Document Classification</h3>
+        <p>Structify allows you to categorize documents with AI, saving time and effort.</p>
+      </div>
+      <div class="info-card">
+        <img src="./images/folder.png" alt="Multiple Categories" />
+        <h3>Supports Multiple Categories</h3>
+        <p>Structify supports business, healthcare, politics, and more.</p>
+      </div>
+      <div class="info-card">
+        <img src="./images/ai-assistant.png" alt="AI Powered" />
+        <h3>ML-Powered Accuracy</h3>
+        <p>Our system ensures accurate document classification with minimal errors.</p>
+      </div>
+    </div>
+
+    <h1>How Structify Works? </h1>
+
+    <div class="section how-it-works">
+      <div class="step-card info-card">
+        <img src="./images/upload.png" alt="Step 1" />
+        <h3>Step 1: Upload Your Documents</h3>
+        <p>Start by uploading a ZIP file containing your documents.</p>
+      </div>
+      <div class="step-card info-card">
+        <img src="./images/brain.png" alt="Step 2" />
+        <h3>Step 2: Automated Classification</h3>
+        <p>The system analyzes the content and categorizes each document.</p>
+      </div>
+      <div class="step-card info-card">
+        <img src="./images/review.png" alt="Step 3" />
+        <h3>Step 3: User Review & Feedback</h3>
+        <p>Review results, provide feedback, and retrain for better accuracy.</p>
+      </div>
+      <div class="step-card info-card">
+        <img src="./images/downloads.png" alt="Step 4" />
+        <h3>Step 4: Download Classified Documents </h3>
+        <p>Get organized files in category-specific folders.</p>
+      </div>
+    </div>
+
+    <div class="section industries">
+      <h1>Industries That Benefit From Structify </h1>
+      <div class="industry-grid">
+        <div class="industry-card info-card">
+          <img src="./images/healthcare.png" alt="Healthcare" />
+          <h4>Healthcare</h4>
+          <p>Effortlessly manage patient records and medical documents.</p>
+        </div>
+        <div class="industry-card info-card">
+          <img src="./images/budget.png" alt="Business" />
+          <h4>Business</h4>
+          <p>Organize invoices, reports, and other business documents.</p>
+        </div>
+        <div class="industry-card info-card">
+          <img src="./images/education.png" alt="Education" />
+          <h4>Education</h4>
+          <p>Streamline research papers, assignments, and reports.</p>
+        </div>
+        <div class="industry-card info-card">
+          <img src="./images/law.png" alt="Legal" />
+          <h4>Legal</h4>
+          <p>
+            Effortlessly manage legal contracts, case files, and compliance documents.
+          </p>
+        </div>
+        <div class="industry-card info-card">
+          <img src="./images/cooperation.png" alt="Finance" />
+          <h4>Finance</h4>
+          <p>
+            Categorize financial statements, investment reports, and audit documents.
+          </p>
+        </div>
+        <div class="industry-card info-card">
+          <img src="./images/it.png" alt="I.T." />
+          <h4>I.T.</h4>
+          <p>
+            Organize campaign briefs, market analysis, and content strategies effectively.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="document">Upload a ZIP file containing documents to Classify:</label>
+      <input type="file" name="documents" id="documents" accept=".zip" required />
+      <br />
+      <button type="submit">Classify</button>
+    </form>
+    <div id="loadingBar" class="loading-bar">
+      <div class="progress-bar">
+        <div id="loadingBarProgress" class="progress-bar-inner"></div>
+      </div>
+      <p id="loadingText">
+        Processing... <span id="loadingPercentage">0%</span>
+      </p>
+    </div>
+    <div id="result" class="output"></div>
+    <div>
+      <button id="downloadButton">Download Classified Documents</button>
+      <button id="retrainButton">Retrain Model</button>
+    </div>
+    <div id="retrainingStatus"></div>
+    <div class="chart-container">
+      <canvas id="categoryChart"></canvas>
+    </div>
+  </main>
+</body>
+<footer style="background-color:rgb(11, 177, 215) ;text-align: center;font-size:22px;font-weight: 500;">© 2024 Structify
+  AI . All Rights Reserved</footer>
+</html>
